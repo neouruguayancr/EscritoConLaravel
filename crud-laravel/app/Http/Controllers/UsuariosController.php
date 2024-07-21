@@ -67,9 +67,11 @@ class UsuariosController extends Controller
      * @param  \App\Models\Usuarios  $usuarios
      * @return \Illuminate\Http\Response
      */
-    public function edit(Usuarios $usuarios)
+    public function edit($id)
     {
         //
+        $usuario = Usuarios::findOrFail($id);
+        return view('usuarios.edit', compact('usuario'));
     }
 
     /**
@@ -79,9 +81,14 @@ class UsuariosController extends Controller
      * @param  \App\Models\Usuarios  $usuarios
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Usuarios $usuarios)
+    public function update(Request $request, $id)
     {
         //
+        $datosUsuario=request()->except(['_token','_method']);
+        Usuarios::where('id','=',$id)->update($datosUsuario);
+
+        $usuario = Usuarios::findOrFail($id);
+        return view('usuarios.edit', compact('usuario'));
     }
 
     /**
