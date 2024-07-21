@@ -16,4 +16,8 @@
     <input type="text" name="telefono" id="telefono" value="{{ $usuario->telefono }}">
     <br>
 <input type="submit" value="Editar">
+<br>
+<a href="{{ url('usuarios')}}">Volver al Index</a>
+<a href="{{ url('/') }}">Volver a Welcome</a>
+
 </form>

@@ -1,3 +1,7 @@
+
+<a href="{{ url('usuarios/create')}}">Agregar Usuario</a>
+<a href="{{ url('/') }}">Volver a Welcome</a>
+
 <table class="table table-light">
     <thead class="thead-light">
         <tr>

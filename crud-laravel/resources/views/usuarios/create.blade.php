@@ -15,4 +15,8 @@
     <input type="text" name="telefono" id="telefono" value="">
 <br>
     <input type="submit" value="Agregar">
+<a href="{{ url('usuarios')}}">Volver al Index</a>
+<a href="{{ url('/') }}">Volver a Welcome</a>
+
+
 </form>
