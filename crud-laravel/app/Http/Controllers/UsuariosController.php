@@ -47,6 +47,7 @@ class UsuariosController extends Controller
         Usuarios::insert($datosUsuario);
 
         return response()->json($datosUsuario);
+
     }
 
     /**
@@ -89,8 +90,11 @@ class UsuariosController extends Controller
      * @param  \App\Models\Usuarios  $usuarios
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Usuarios $usuarios)
+    public function destroy($id)
     {
         //
+        Usuarios::destroy($id);
+
+        return redirect('usuarios');
     }
 }
