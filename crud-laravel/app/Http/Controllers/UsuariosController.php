@@ -47,6 +47,7 @@ class UsuariosController extends Controller
         Usuarios::insert($datosUsuario);
 
         // return response()->json($datosUsuario);
+        return redirect('usuarios')->with('Mensaje', 'Empleado agregado con éxito');
 
         return redirect('usuarios');
 
